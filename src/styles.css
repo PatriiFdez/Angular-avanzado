@@ -21,6 +21,8 @@
   border: 1px solid lightblue;
   /* transition:all 2s; */
   transition:border 2s, border-radius 500ms, background 5s;
+  display: block;
+  width: 100px;
 }
 
 .boton_transiciones:hover {
@@ -30,4 +32,11 @@
   border-radius: 2px;
   background: #ccc;
   border: 1px solid red;
+}
+
+.caja_animada {
+  background: green;
+  border: 5px solid black;
+  width: 200px;
+  height: 200px;
 }
