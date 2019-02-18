@@ -1,4 +1,13 @@
-<div class="container">
+<div class="container" [@fadeIn]>
+
+  <a class="btn btn-success boton_activo"
+    [@marcar]="status" (click)="cambiarEstado(status)">
+    <span *ngIf="status == 'inactive'">Botón inactivo</span>
+    <span *ngIf="status == 'active'">Botón activo</span>
+  </a>
+
+  <hr>
+  <h4>Animaciones CSS3</h4>
 
   <a class="boton_transiciones">Transiciones</a>
 

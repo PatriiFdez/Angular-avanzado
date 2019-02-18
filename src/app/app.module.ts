@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders } from './app.routing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import * as $ from 'jquery';
-import { EditorModule } from '@tinymce/tinymce-angular';
+// import { EditorModule } from '@tinymce/tinymce-angular';
 
 // Importar nuestro nuevo modulo
 import { ModuloEmailModule } from './moduloemail/moduloemail.module';
@@ -31,10 +32,11 @@ import { KeepersComponent } from './components/keepers/keepers.component';
   ],
   imports: [
     BrowserModule,
-    EditorModule,
+    // EditorModule,
     FormsModule,
     HttpModule,
     routing,
+    BrowserAnimationsModule,
     ModuloEmailModule,
     AdminModule
   ],

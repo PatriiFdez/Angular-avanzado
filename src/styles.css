@@ -22,7 +22,7 @@
   /* transition:all 2s; */
   transition:border 2s, border-radius 500ms, background 5s;
   display: block;
-  width: 100px;
+  width: 115px;
 }
 
 .boton_transiciones:hover {
@@ -35,8 +35,85 @@
 }
 
 .caja_animada {
+  margin-top: 15px;
   background: green;
   border: 5px solid black;
   width: 200px;
   height: 200px;
+
+  /* animation-name: deslizamiento; */
+  animation-name: rotacion;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotacion {
+  0% {
+    margin-left: 0px;
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+    margin-left: 600px;
+  }
+  100% {
+    margin-left: 0px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotacion1 {
+  from {
+    margin-left: 0px;
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    margin-left: 600px;
+  }
+}
+
+@keyframes deslizamiento {
+  0% {
+    margin-left: 0px;
+  }
+  25% {
+    margin-left: 400px;
+    background: red;
+  }
+  50% {
+    border-radius: 1000px;
+  }
+  75% {
+    margin-left: 0px;
+    background: yellow;
+    border-radius: 0px;
+  }
+  100% {
+    background: green;
+  }
+}
+
+@keyframes deslizamiento2 {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: 400px;
+    background: red;
+  }
+  100% {
+    margin-left: 0px;
+    background: yellow;
+  }
+}
+
+@keyframes deslizamiento1 {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 400px;
+    background: red;
+  }
 }
