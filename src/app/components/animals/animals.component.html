@@ -1,3 +1,33 @@
-<div class="container" [@fadeIn]>
+<div class="container mx-auto my-2" [@fadeIn]>
   <h1>{{title}}</h1>
+
+  <!-- <div class="row animal-item">
+    <div class="card col-3 m-1" *ngFor="let animal of animals">
+      <div class="image-mask">
+        <img *ngIf="animal.image" class="card-img-top" src="{{ url + 'get-image-animal/'  + animal.image}}" alt="{{animal.name}}">
+        <img *ngIf="!animal.image" class="card-img-top" src="http://via.placeholder.com/270x200" alt="{{animal.name}}">
+      </div>
+      <div class="card-body caption">
+        <h5 class="card-title">{{animal.name}}</h5>
+        <p class="card-text">{{animal.description}}</p>
+        <a [routerLink]="['/animal', animal._id]" class="btn btn-primary">Ver detalles </a>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="row">
+  <div class="col-4 mt-2 mb-2" *ngFor="let animal of animals">
+    <div class="card">
+      <div class="image-mask">
+        <img *ngIf="animal.image" class="card-img-top" src="{{ url + 'get-image-animal/'  + animal.image}}" alt="{{animal.name}}">
+        <img *ngIf="!animal.image" class="card-img-top" src="http://via.placeholder.com/270x200" alt="{{animal.name}}">
+      </div>
+      <div class="card-body caption">
+        <h5 class="card-title">{{animal.name}}</h5>
+        <p class="card-text">{{animal.description}}</p>
+        <a [routerLink]="['/animal', animal._id]" class="btn btn-primary">Ver detalles </a>
+      </div>
+    </div>
+  </div>
 </div>

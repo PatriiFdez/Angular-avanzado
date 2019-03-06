@@ -1,0 +1,23 @@
+<div class="container my-2">
+  <div class="animal-box row" *ngIf="animal">
+    <div id="animal-head-card col-lg-4" *ngIf="animal && animal.image">
+      <img src="{{url + 'get-image-animal/' + animal.image}}" width="300px" />
+    </div>
+    <div class="animal-data col-lg-7">
+      <div class="row">
+        <h1 class="col">{{ animal.name }}</h1>
+        <button type="button" class="btn btn-sm btn-light border-secondary float-right col-2 h-50" [routerLink]="['/admin-panel']" *ngIf="identity && identity.role == 'ROLE_ADMIN'">
+          <i class="fas fa-undo-alt"></i>
+          Volver
+        </button>
+        <button type="button" class="btn btn-sm btn-light border-secondary float-right col-2 h-50" [routerLink]="['/animales']" *ngIf="identity && identity.role == 'ROLE_USER'">
+          <i class="fas fa-undo-alt"></i>
+          Volver
+        </button>
+      </div>
+      <p>Creado por: <span class="font-italic">{{ animal.user.name + ' ' + animal.user.surname }}</span></p>
+      <p>{{ animal.description }}</p>
+      <p>Año: {{ animal.year }}</p>
+    </div>
+  </div>
+</div>

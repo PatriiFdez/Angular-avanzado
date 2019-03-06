@@ -1,4 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: 'B612', sans-serif;
+  margin-bottom: 80px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+}
+
+.bg-custom-blue {
+  /* background-color: #80d9f7; */
+  background-color: #a4d3fc;
+}
+
 .navigation.col-lg-12{
   margin-top: 10px;
 }
@@ -10,7 +32,17 @@
 }
 
 .navbar-nav .active {
+  border-bottom: 3px solid black !important;
+}
+
+.navbar-nav>li>a:hover{
+  transition: all 300ms;
   border-bottom: 3px solid black;
+}
+
+.navbar-nav>li>a{
+  transition: all 300ms;
+  border-bottom: 3px solid transparent;
 }
 
 .boton_transiciones {
@@ -36,7 +68,7 @@
 
 .caja_animada {
   margin-top: 15px;
-  background: green;
+  background: #6d1a1b;
   border: 5px solid black;
   width: 200px;
   height: 200px;
@@ -45,6 +77,33 @@
   animation-name: rotacion;
   animation-duration: 20s;
   animation-iteration-count: infinite;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 700px;
+  overflow: hidden;
+  /* margin-top: 9px;
+  margin-right: 7px; */
+}
+
+.avatar img{
+  height: 45px;
+}
+
+.image-mask {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.image-mask img {
+  height: 150px;
 }
 
 @keyframes rotacion {

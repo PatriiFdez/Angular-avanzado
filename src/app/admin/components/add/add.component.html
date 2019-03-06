@@ -1,18 +1,38 @@
-<h3>{{title}}</h3>
+<div class="col-lg-10 my-2">
+  <h3>{{title}}</h3>
 
-<form>
-  <p>
-    <label>Nombre</label>
-    <input type="text" class="form-control" />
-  </p>
-  <p>
-    <label>Descripcion</label>
-    <textarea class="form-control"></textarea>
-  </p>
-  <p>
-    <label>Año</label>
-    <input type="text" class="form-control" />
-  </p>
+  <form #formAdd="ngForm" (ngSubmit)="onSubmit()">
+    <p>
+      <label>Nombre</label>
+      <input type="text" name="name" #name="ngModel" [(ngModel)]="animal.name" class="form-control" required />
+      <span *ngIf="!name.valid && name.touched">
+        El nombre es obligatorio
+      </span>
+    </p>
+    <p>
+      <label>Descripcion</label>
+      <textarea class="form-control" name="description" #description="ngModel" [(ngModel)]="animal.description" required ></textarea>
+      <span *ngIf="!description.valid && description.touched">
+        La descripción es obligatoria
+      </span>
+    </p>
+    <p>
+      <label>Año</label>
+      <input type="text" class="form-control" name="year" #year="ngModel" [(ngModel)]="animal.year" required />
+      <span *ngIf="!year.valid && year.touched">
+        El año es obligatorio
+      </span>
+    </p>
+    <div *ngIf="is_edit && animal.image">
+      <div class="animal_image">
+        <img src="{{ url + 'get-image-animal/' + animal.image }}" width="120px" />
+      </div>
+    </div>
+    <p>
+      <label for="image">Subir imagen del animal</label>
+      <input type="file" name="image" placeholder="Subir imagen..." class="form-control" (change)="fileChangeEvent($event)">
+    </p>
 
-  <input type="submit" value="{{title}}" class="btn btn-success"/>
-</form>
+    <input type="submit" value="{{title}}" class="btn btn-success"/>
+  </form>
+</div>

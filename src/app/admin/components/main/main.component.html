@@ -1,8 +1,8 @@
-<div class="row">
+<div class="row m-2">
   <div class="col-md-4">
     <h3>{{title}}</h3>
     <div class="sidebar-admin" data-example-id="sample-nav-stacked">
-      <ul class="nav nav-pills">
+      <ul class="nav nav-pills flex-column">
         <li class="nav-item" role="presentation">
           <a class="nav-link" [routerLink]="['listado']" [routerLinkActive]="['active']">Listado</a>
         </li>
@@ -10,7 +10,7 @@
           <a class="nav-link" [routerLink]="['crear']"  [routerLinkActive]="['active']">Crear</a>
         </li>
         <li class="nav-item" role="presentation">
-          <a class="nav-link" [routerLink]="['']"  [routerLinkActive]="['active']">Informacion</a>
+          <a class="nav-link" [routerLink]="['info']"  [routerLinkActive]="['active']">Informacion</a>
         </li>
       </ul>
     </div>

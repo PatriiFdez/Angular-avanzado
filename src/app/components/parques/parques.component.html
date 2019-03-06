@@ -1,13 +1,15 @@
-<h2>
-  {{ nombre }}
-</h2>
-<ol>
-  <li>Metros {{ metros }}</li>
-  <li>Vegetacion {{ vegetacion }}</li>
-  <li>
-    <span *ngIf="abierto == true">Abierto</span>
-    <span *ngIf="abierto != true">Cerrado</span>
-  </li>
-</ol>
+<div class="container my-2">
+  <h2>
+    {{ nombre }}
+  </h2>
+  <ol>
+    <li>Metros {{ metros }}</li>
+    <li>Vegetacion {{ vegetacion }}</li>
+    <li>
+      <span *ngIf="abierto == true">Abierto</span>
+      <span *ngIf="abierto != true">Cerrado</span>
+    </li>
+  </ol>
 
-<button (click)="emitirEvento()">Mostrar en el padre</button>
+  <button (click)="emitirEvento()">Mostrar en el padre</button>
+</div>

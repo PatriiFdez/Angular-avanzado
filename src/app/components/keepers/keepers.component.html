@@ -1,3 +1,17 @@
-<div class="container" [@fadeIn]>
+<div class="container my-2" [@fadeIn]>
   <h1>{{ title }}</h1>
+
+  <div class="row">
+    <div class="card col-3 m-1" *ngFor="let keeper of keepers">
+      <div class="image-mask mt-2">
+        <img *ngIf="keeper.image" class="card-img-top rounded" src="{{ url + 'get-image-file/'  + keeper.image}}" alt="{{keeper.name}}">
+        <img *ngIf="!keeper.image" class="card-img-top rounded" src="http://via.placeholder.com/270x200" alt="{{keeper.name}}">
+      </div>
+      <div class="card-body caption">
+        <h5 class="card-title">{{keeper.name + ' ' + keeper.surname}}</h5>
+        <!-- <p class="card-text">{{keeper.description}}</p> -->
+        <!-- <a [routerLink]="['/keeper', keeper._id]" class="btn btn-primary">Ver detalles </a> -->
+      </div>
+    </div>
+  </div>
 </div>

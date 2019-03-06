@@ -6,7 +6,9 @@ import { Component, DoCheck, OnInit } from '@angular/core';
   <h4>{{ title }}</h4>
     <div *ngIf="emailContacto">
       <strong>Email de contacto: </strong> {{emailContacto}}
-      <button class="btn btn-outline-primary" (click)="borrarEmail()">Eliminar email de contacto</button>
+      <div class="col-12 mt-2 mb-2">
+        <button class="btn btn-outline-primary" (click)="borrarEmail()">Eliminar email de contacto</button>
+      </div>
     </div>
   `
 })

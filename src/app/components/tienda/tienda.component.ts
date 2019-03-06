@@ -12,11 +12,13 @@ declare var $: any;
   animations: [
     trigger('marcar', [
       state('inactive', style({
-        border: '5px solid #ccc'
+        border: '3px solid #ccc',
+        background: '#6d1a1b',
+        color: 'white'
       })),
       state('active', style({
-        border: '5px solid yellow',
-        background: 'red',
+        border: '3px solid darkgreen',
+        background: '#53896a',
         borderRadius: '50px',
         transform: 'scale(1.2)'
       })),
